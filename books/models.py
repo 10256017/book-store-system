@@ -36,7 +36,7 @@ class Book(models.Model):
     publish = models.ForeignKey(Publish, models.PROTECT, verbose_name='出版社')    #建forginkey
     classification = models.ForeignKey(Classification, models.PROTECT, verbose_name='分類')
     tags = models.ManyToManyField(Tag, verbose_name='標籤')
-    intrduction = models.TextField('簡介')
+    introduction = models.TextField('簡介')
 
     def __str__(self):
         return self.name
